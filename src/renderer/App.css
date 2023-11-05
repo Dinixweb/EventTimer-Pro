@@ -3,20 +3,17 @@
  *        See https://github.com/webpack-contrib/sass-loader#imports
  */
 body {
-  position: relative;
-  color: white;
+  /* position: relative; */
+  color: #2C2C2C;
   height: 100vh;
-  background: linear-gradient(
-    200.96deg,
-    #fedc2a -29.09%,
-    #dd5789 51.77%,
-    #7a2c9e 129.35%
-  );
+  background: #fff;
   font-family: sans-serif;
   overflow-y: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
 button {
@@ -54,9 +51,50 @@ a:hover {
   text-decoration: none;
 }
 
-.Hello {
+.splashscreen {
+  width: 100vw !important;
+  height: 100vh;
+  background: #036C9F;
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin: 20px 0;
+  justify-content: center;
+}
+
+.welcomeScreen {
+  display: flex;
+  width: 400px;
+  height: 400px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: fit-content;
+}
+
+.welcomeText {
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.welcomeDesc {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin-top: 30px;
+}
+
+.startButton {
+  margin-top: 50px;
+}
+
+.startButton .btn {
+  cursor: pointer;
+}
+
+.home {
+  background: white;
+  height: 100vh;
+  width: 800px;
+  margin-top: 0;
+  display: flex
 }

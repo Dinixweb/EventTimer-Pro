@@ -1,37 +1,30 @@
-import icon from '../../../../assets/icon.svg';
+import { useNavigate } from 'react-router-dom';
+import logo from '../../../../assets/logo.svg';
 
-export default function Hello() {
+export default function WelcomeScreen() {
+  const welcomeText = {
+    title: 'event timer pro',
+    desc: 'monitor and manage event timer',
+  };
+  const navigate = useNavigate();
+  const handleStart = () => {
+    navigate('/home');
+  };
   return (
-    <div>
-      <div className="Hello">
-        <img width="200" alt="icon" src={icon} />
-      </div>
-      <h1>electron-react-boilerplate</h1>
-      <div className="Hello">
-        <a
-          href="https://electron-react-boilerplate.js.org/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button type="button">
-            <span role="img" aria-label="books">
-              📚
-            </span>
-            Read our docs
+    <div className="splashscreen ">
+      <div className="welcomeScreen">
+        <img src={logo} width={200} height={200} alt="logo" />
+        <div className="welcomeText">{welcomeText.title}</div>
+        <div className="welcomeDesc">{welcomeText.desc}</div>
+        <div className="startButton">
+          <button
+            type="button"
+            className="startButton btn"
+            onClick={handleStart}
+          >
+            start
           </button>
-        </a>
-        <a
-          href="https://github.com/sponsors/electron-react-boilerplate"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button type="button">
-            <span role="img" aria-label="folded hands">
-              🙏
-            </span>
-            Donate
-          </button>
-        </a>
+        </div>
       </div>
     </div>
   );

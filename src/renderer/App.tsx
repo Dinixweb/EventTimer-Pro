@@ -1,13 +1,14 @@
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Hello from './pages/splashScreen';
+import WelcomeScreen from './pages/splashScreen';
+import HomeScreen from './pages/home';
 
 export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Hello />} />
-        <Route path="/" element={<Hello />} />
+        <Route path="/" element={<WelcomeScreen />} />
+        <Route path="/home" element={<HomeScreen />} />
       </Routes>
     </Router>
   );
